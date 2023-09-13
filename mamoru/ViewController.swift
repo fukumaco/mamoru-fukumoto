@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import GoogleSignIn
+//import GoogleSignIn
 
-class ViewController: UIViewController,GIDSignInDelegate {
-    
+class ViewController: UIViewController {
+    //class ViewController: UIViewController, GIDSignInDelegate
     
     
     @IBOutlet weak var mamoru: UIImageView!
@@ -16,30 +18,39 @@ class ViewController: UIViewController,GIDSignInDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance().delegate = self
+        //        GIDSignIn.sharedInstance.delegate = self
     }
     
     @IBAction func enterButton(_ sender: Any) {
+        
         performSegue(withIdentifier: "Push", sender: self)}
     
+    //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //   <#code#> //pushの時に値を次の　次のテキストフィールドの変数を渡す
+    
+    //  }
+    
+    
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
-        GIDSignIn.sharedInstance().signIn()
-    }
-    
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if error == nil {
-            if let authentication = user.authentication {
-                let idToken = authentication.idToken // Google ID Tokenを取得
-                let accessToken = authentication.accessToken // Google Access Tokenを取得
-                // ここでidTokenやaccessTokenを使用してアプリの操作を行います
+        // Create Google Sign In configuration object.
+        //          let config = GIDConfiguration(clientID: clientID)
+        //          GIDSignIn.sharedInstance.configuration = config
+        
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
+            guard error == nil else {
+                return
             }
-        } else {
-            // エラーが発生した場合の処理
-            print("Googleログインエラー: \(error.localizedDescription)")
+            
+            guard let user = result?.user            else { return }
+            print(user.accessToken)
+            self.performSegue(withIdentifier: "Push", sender: self)
+            
+            // ...
         }
+        
     }
+    
+  
+    
 }
-
-
-
