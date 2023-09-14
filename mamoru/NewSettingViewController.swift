@@ -44,44 +44,20 @@ class NewSettingViewController: UIViewController {
         remainingDays.text = "\(days) days"
         remainingTime.text = "\(hours) hours"
     }
-}
-
-/*
-import UIKit
-
-class NewSettingViewController: UIViewController {
-
     
-    @IBOutlet weak var deadline: UIDatePicker!
-    
-    @IBOutlet weak var startDate: UIDatePicker!
-
-    @IBOutlet weak var workDay: UISegmentedControl!
-    @IBOutlet weak var hoursOfWorkPerDay: UITextField!
-    
-    @IBOutlet weak var remainingDays: UITextField!
-    
-    @IBOutlet weak var remainingTime: UITextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBAction func ToTodolistButton(_ sender: Any) {//segueを実行する
+        performSegue(withIdentifier: "showToDoInput", sender: self)
     }
-    
-    @IBAction func culculate(_ sender: Any) {
-    }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //segueが実行される前に呼ばれる関数
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        //segueのIdentifierが"showToDoInput"であれば
+        if segue.identifier == "showToDoInput" {
+            //遷移先のToDoInputViewControllerを取得する
+            let toDoInputVC = segue.destination as! ToDoInputViewController
+            //遷移先の残日数と残時間に値を渡す
+            toDoInputVC.remainingDays.text = remainingDays.text
+            toDoInputVC.remainingTime.text = remainingTime.text
+        }
     }
-    */
-
 }
-*/
-
