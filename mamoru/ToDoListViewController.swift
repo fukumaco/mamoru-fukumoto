@@ -14,7 +14,6 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     // テーブルに表示するデータの箱
     var todoList = [String]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

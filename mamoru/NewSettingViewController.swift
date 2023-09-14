@@ -47,8 +47,16 @@ class NewSettingViewController: UIViewController {
     }
     
     @IBAction func ToTodolistButton(_ sender: Any) {
-        
-        // segueを実行する
+             // ToDoInputViewControllerのインスタンスを作成
+             let toDoInputVC = storyboard?.instantiateViewController(withIdentifier: "ToDoInputViewController") as! ToDoInputViewController
+             // 残日数と残時間を渡す
+             toDoInputVC.remainingDaysText = remainingDays.text ?? ""
+             toDoInputVC.remainingTimeText = remainingTime.text ?? ""
+             // モーダルビューとして表示する（アニメーションはtrueと仮定）
+             present(toDoInputVC, animated: true, completion: nil)
+         }
+        /*
+        // segueを実行する場合のコード
         //performSegue(withIdentifier: "showToDoInput", sender: self)
         // ToDoInputViewControllerのインスタンスを作成
         let toDoInputVC = storyboard?.instantiateViewController(withIdentifier: "ToDoInputViewController") as! ToDoInputViewController
@@ -58,6 +66,8 @@ class NewSettingViewController: UIViewController {
         // 遷移する（セグエのIDは"showToDoInput"）
         performSegue(withIdentifier: "showToDoInput", sender: toDoInputVC)
     }
+         */
+        
     
 }
 
