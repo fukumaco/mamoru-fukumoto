@@ -12,7 +12,6 @@ import GoogleSignIn
 class ViewController: UIViewController {
     //class ViewController: UIViewController, GIDSignInDelegate
    
-    @IBOutlet weak var nonLoiginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

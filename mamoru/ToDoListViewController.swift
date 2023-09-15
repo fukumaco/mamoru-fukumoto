@@ -10,6 +10,7 @@ import GoogleAPIClientForREST_Calendar
 
 class ToDoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var mountainGraphics: UIButton!
     
     @IBOutlet weak var tableView: UITableView!
     // テーブルに表示するデータの箱
