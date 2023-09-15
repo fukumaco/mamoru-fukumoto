@@ -7,6 +7,10 @@
 
 // NewSettingViewController
 
+//import GoogleAPIClientForREST
+//import GTMSessionFetcher
+
+
 import UIKit
 
 class NewSettingViewController: UIViewController {
@@ -47,44 +51,62 @@ class NewSettingViewController: UIViewController {
     }
     
     @IBAction func ToTodolistButton(_ sender: Any) {
-             // ToDoInputViewControllerのインスタンスを作成
-             let toDoInputVC = storyboard?.instantiateViewController(withIdentifier: "ToDoInputViewController") as! ToDoInputViewController
-             // 残日数と残時間を渡す
-             toDoInputVC.remainingDaysText = remainingDays.text ?? ""
-             toDoInputVC.remainingTimeText = remainingTime.text ?? ""
-             // モーダルビューとして表示する（アニメーションはtrueと仮定）
-             present(toDoInputVC, animated: true, completion: nil)
-         }
-        /*
+        
         // segueを実行する場合のコード
         //performSegue(withIdentifier: "showToDoInput", sender: self)
         // ToDoInputViewControllerのインスタンスを作成
+        
         let toDoInputVC = storyboard?.instantiateViewController(withIdentifier: "ToDoInputViewController") as! ToDoInputViewController
         // 残日数と残時間を渡す
         toDoInputVC.remainingDaysText = remainingDays.text ?? ""
         toDoInputVC.remainingTimeText = remainingTime.text ?? ""
         // 遷移する（セグエのIDは"showToDoInput"）
         performSegue(withIdentifier: "showToDoInput", sender: toDoInputVC)
-    }
-         */
         
+    }
+    
+    
+    /*presentを使った場合のコード
+     // ToDoInputViewControllerのインスタンスを作成
+     let toDoInputVC = storyboard?.instantiateViewController(withIdentifier: "ToDoInputViewController") as! ToDoInputViewController
+     // 残日数と残時間を渡す
+     toDoInputVC.remainingDaysText = remainingDays.text ?? ""
+     toDoInputVC.remainingTimeText = remainingTime.text ?? ""
+     // モーダルビューとして表示する（アニメーションはtrueとする）
+     present(toDoInputVC, animated: true, completion: nil)
+     */
+    
+    
+    
+    
+    @IBAction func calenderButton(_ sender: Any) {
+    }
+    
+    /*
+     // segueを実行する場合のコード
+     //performSegue(withIdentifier: "showToDoInput", sender: self)
+     // ToDoInputViewControllerのインスタンスを作成
+     let toDoInputVC = storyboard?.instantiateViewController(withIdentifier: "ToDoInputViewController") as! ToDoInputViewController
+     // 残日数と残時間を渡す
+     toDoInputVC.remainingDaysText = remainingDays.text ?? ""
+     toDoInputVC.remainingTimeText = remainingTime.text ?? ""
+     // 遷移する（セグエのIDは"showToDoInput"）
+     performSegue(withIdentifier: "showToDoInput", sender: toDoInputVC)
+     }
+     */
+    
+    /*
+     //segueが実行される前に呼ばれる関数
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     //segueのIdentifierが"showToDoInput"であれば
+     if segue.identifier == "showToDoInput" {
+     //遷移先のToDoInputViewControllerを取得する
+     let toDoInputVC = segue.destination as! ToDoInputViewController
+     //遷移先の残日数と残時間に値を渡す
+     toDoInputVC.remainingDays.text = remainingDays.text
+     toDoInputVC.remainingTime.text = remainingTime.text
+     }
+     }
+     */
     
 }
-
-
-/*
- //segueが実行される前に呼ばれる関数
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- //segueのIdentifierが"showToDoInput"であれば
- if segue.identifier == "showToDoInput" {
- //遷移先のToDoInputViewControllerを取得する
- let toDoInputVC = segue.destination as! ToDoInputViewController
- //遷移先の残日数と残時間に値を渡す
- toDoInputVC.remainingDays.text = remainingDays.text
- toDoInputVC.remainingTime.text = remainingTime.text
- }
- }
- */
-
-
-

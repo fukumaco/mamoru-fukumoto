@@ -11,46 +11,31 @@ import GoogleSignIn
 
 class ViewController: UIViewController {
     //class ViewController: UIViewController, GIDSignInDelegate
-    
-    
-    @IBOutlet weak var mamoru: UIImageView!
-    
+   
+    @IBOutlet weak var nonLoiginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //        GIDSignIn.sharedInstance.delegate = self
     }
-    
     @IBAction func enterButton(_ sender: Any) {
         
         performSegue(withIdentifier: "Push", sender: self)}
-    
     //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //   <#code#> //pushの時に値を次の　次のテキストフィールドの変数を渡す
-    
+    //pushの時に値を次の　次のテキストフィールドの変数を渡す
     //  }
     
-    
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
-        // Create Google Sign In configuration object.
-        //          let config = GIDConfiguration(clientID: clientID)
-        //          GIDSignIn.sharedInstance.configuration = config
-        
-        // Start the sign in flow!
+      
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
             guard error == nil else {
                 return
             }
             
             guard let user = result?.user            else { return }
-            print(user.accessToken)
+            //print(user.accessToken)
+            //AUTHORISERを保存して　userdefault に保存しておく
             self.performSegue(withIdentifier: "Push", sender: self)
-            
-            // ...
         }
-        
     }
-    
-  
-    
 }
