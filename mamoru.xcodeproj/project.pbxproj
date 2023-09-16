@@ -30,6 +30,13 @@
 		6A77B6312AB173ED005B115A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6A77B6302AB173ED005B115A /* GoogleSignIn */; };
 		6A77B6332AB173ED005B115A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A77B6322AB173ED005B115A /* GoogleSignInSwift */; };
 		6A77B6372AB1827F005B115A /* calenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A77B6362AB1827F005B115A /* calenderViewController.swift */; };
+		6A83CC9D2AB4A03900A4B0A9 /* dog06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A83CC962AB4A03900A4B0A9 /* dog06.mp3 */; };
+		6A83CC9E2AB4A03900A4B0A9 /* dog05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A83CC972AB4A03900A4B0A9 /* dog05.mp3 */; };
+		6A83CC9F2AB4A03900A4B0A9 /* dog07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A83CC982AB4A03900A4B0A9 /* dog07.mp3 */; };
+		6A83CCA02AB4A03900A4B0A9 /* dog04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A83CC992AB4A03900A4B0A9 /* dog04.mp3 */; };
+		6A83CCA12AB4A03900A4B0A9 /* dog01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A83CC9A2AB4A03900A4B0A9 /* dog01.mp3 */; };
+		6A83CCA22AB4A03900A4B0A9 /* dog03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A83CC9B2AB4A03900A4B0A9 /* dog03.mp3 */; };
+		6A83CCA42AB4A38400A4B0A9 /* dog02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A83CCA32AB4A38400A4B0A9 /* dog02.mp3 */; };
 		6ACC49972AB1EC8700C37CD3 /* ToDoInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACC49962AB1EC8700C37CD3 /* ToDoInputViewController.swift */; };
 		6AEFC73E2AB0244300D2DA8C /* client_543081431652-i8583mar2pgv9565g09sop7jcqh8db11.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AEFC73D2AB0244200D2DA8C /* client_543081431652-i8583mar2pgv9565g09sop7jcqh8db11.apps.googleusercontent.com.plist */; };
 		6AF050332AB14D4E004D8175 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF050322AB14D4E004D8175 /* ToDoListViewController.swift */; };
@@ -56,6 +63,13 @@
 		6A714C542AAEE4720055A0A7 /* mameshiba01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mameshiba01.png; sourceTree = "<group>"; };
 		6A714C572AAEE8320055A0A7 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		6A77B6362AB1827F005B115A /* calenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calenderViewController.swift; sourceTree = "<group>"; };
+		6A83CC962AB4A03900A4B0A9 /* dog06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog06.mp3; sourceTree = "<group>"; };
+		6A83CC972AB4A03900A4B0A9 /* dog05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog05.mp3; sourceTree = "<group>"; };
+		6A83CC982AB4A03900A4B0A9 /* dog07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog07.mp3; sourceTree = "<group>"; };
+		6A83CC992AB4A03900A4B0A9 /* dog04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog04.mp3; sourceTree = "<group>"; };
+		6A83CC9A2AB4A03900A4B0A9 /* dog01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dog01.mp3; path = ../../Downloads/dog01.mp3; sourceTree = "<group>"; };
+		6A83CC9B2AB4A03900A4B0A9 /* dog03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog03.mp3; sourceTree = "<group>"; };
+		6A83CCA32AB4A38400A4B0A9 /* dog02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog02.mp3; sourceTree = "<group>"; };
 		6ACC49962AB1EC8700C37CD3 /* ToDoInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoInputViewController.swift; sourceTree = "<group>"; };
 		6AEFC73D2AB0244200D2DA8C /* client_543081431652-i8583mar2pgv9565g09sop7jcqh8db11.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_543081431652-i8583mar2pgv9565g09sop7jcqh8db11.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		6AF050322AB14D4E004D8175 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +96,6 @@
 		6A714C332AAEB9A80055A0A7 = {
 			isa = PBXGroup;
 			children = (
-				6A51AAC62AB429BC0089807D /* DailyReportViewController.swift */,
 				6A714C3E2AAEB9A80055A0A7 /* mamoru */,
 				6A714C3D2AAEB9A80055A0A7 /* Products */,
 			);
@@ -99,25 +112,33 @@
 		6A714C3E2AAEB9A80055A0A7 /* mamoru */ = {
 			isa = PBXGroup;
 			children = (
-				6AF050322AB14D4E004D8175 /* ToDoListViewController.swift */,
+				6A714C452AAEB9A80055A0A7 /* Main.storyboard */,
 				6A714C3F2AAEB9A80055A0A7 /* AppDelegate.swift */,
 				6A714C412AAEB9A80055A0A7 /* SceneDelegate.swift */,
-				6AF49BF42AB091A3007008DD /* NewSettingViewController.swift */,
 				6A714C432AAEB9A80055A0A7 /* ViewController.swift */,
-				6A714C572AAEE8320055A0A7 /* GoalViewController.swift */,
-				6A714C452AAEB9A80055A0A7 /* Main.storyboard */,
-				6A51AAC82AB431BB0089807D /* MountGraphicViewController.swift */,
-				6A51AAC42AB421CA0089807D /* DogPreferViewController.swift */,
 				6A51AAC22AB421910089807D /* TypeViewController.swift */,
-				6A64AC682AB3354900125EC0 /* ContentViewController.swift */,
-				6A64AC662AB315E300125EC0 /* MapViewController.swift */,
+				6A51AAC42AB421CA0089807D /* DogPreferViewController.swift */,
+				6A714C572AAEE8320055A0A7 /* GoalViewController.swift */,
+				6AF49BF42AB091A3007008DD /* NewSettingViewController.swift */,
 				6ACC49962AB1EC8700C37CD3 /* ToDoInputViewController.swift */,
+				6AF050322AB14D4E004D8175 /* ToDoListViewController.swift */,
+				6A51AAC62AB429BC0089807D /* DailyReportViewController.swift */,
+				6A64AC662AB315E300125EC0 /* MapViewController.swift */,
+				6A51AAC82AB431BB0089807D /* MountGraphicViewController.swift */,
 				6A06F3472AB3CB3A001EDA5A /* MountIwateViewController.swift */,
 				6A77B6362AB1827F005B115A /* calenderViewController.swift */,
+				6A64AC682AB3354900125EC0 /* ContentViewController.swift */,
 				6A714C482AAEB9AB0055A0A7 /* Assets.xcassets */,
 				6A714C542AAEE4720055A0A7 /* mameshiba01.png */,
 				6A714C532AAEE4720055A0A7 /* mameshiba02.png */,
 				6A714C4A2AAEB9AB0055A0A7 /* LaunchScreen.storyboard */,
+				6A83CC9A2AB4A03900A4B0A9 /* dog01.mp3 */,
+				6A83CC9B2AB4A03900A4B0A9 /* dog03.mp3 */,
+				6A83CCA32AB4A38400A4B0A9 /* dog02.mp3 */,
+				6A83CC992AB4A03900A4B0A9 /* dog04.mp3 */,
+				6A83CC972AB4A03900A4B0A9 /* dog05.mp3 */,
+				6A83CC962AB4A03900A4B0A9 /* dog06.mp3 */,
+				6A83CC982AB4A03900A4B0A9 /* dog07.mp3 */,
 				6A714C4D2AAEB9AC0055A0A7 /* Info.plist */,
 				6AEFC73D2AB0244200D2DA8C /* client_543081431652-i8583mar2pgv9565g09sop7jcqh8db11.apps.googleusercontent.com.plist */,
 			);
@@ -195,10 +216,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A714C4C2AAEB9AB0055A0A7 /* LaunchScreen.storyboard in Resources */,
+				6A83CCA02AB4A03900A4B0A9 /* dog04.mp3 in Resources */,
 				6A714C492AAEB9AB0055A0A7 /* Assets.xcassets in Resources */,
+				6A83CCA12AB4A03900A4B0A9 /* dog01.mp3 in Resources */,
+				6A83CCA22AB4A03900A4B0A9 /* dog03.mp3 in Resources */,
 				6AEFC73E2AB0244300D2DA8C /* client_543081431652-i8583mar2pgv9565g09sop7jcqh8db11.apps.googleusercontent.com.plist in Resources */,
+				6A83CCA42AB4A38400A4B0A9 /* dog02.mp3 in Resources */,
+				6A83CC9F2AB4A03900A4B0A9 /* dog07.mp3 in Resources */,
 				6A714C562AAEE4720055A0A7 /* mameshiba01.png in Resources */,
+				6A83CC9E2AB4A03900A4B0A9 /* dog05.mp3 in Resources */,
 				6A714C472AAEB9A80055A0A7 /* Main.storyboard in Resources */,
+				6A83CC9D2AB4A03900A4B0A9 /* dog06.mp3 in Resources */,
 				6A714C552AAEE4720055A0A7 /* mameshiba02.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

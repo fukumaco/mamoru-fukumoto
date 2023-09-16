@@ -17,14 +17,14 @@ class ToDoInputViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-                //残日数と残時間を表示する
-                // プロパティの値をテキストフィールドに代入する
-                remainingDays.text = remainingDaysText
-                remainingTime.text = remainingTimeText
+        
+        //残日数と残時間を表示する
+        // プロパティの値をテキストフィールドに代入する
+        remainingDays.text = remainingDaysText
+        remainingTime.text = remainingTimeText
         
     }
-        //入力を保存する
+    //入力を保存する
     @IBAction func saveButton(_ sender: Any) {
         // UserDefaultsのインスタンスを作成
         let userDefaults = UserDefaults.standard
@@ -32,10 +32,25 @@ class ToDoInputViewController: UIViewController {
         userDefaults.set(inputText.text, forKey: "inputText")
         // UserDefaultsに反映させる
         userDefaults.synchronize()
-    }
+        
+        // 改行ごとにテキストを分割して配列に格納する
+        let inputTextLines = inputText.text.split(separator: "\n").map { String($0) }
+        
+        // 配列の各要素を箇条書き文字列に変換
+        let bulletedText = inputTextLines.map { "• \($0)" }.joined(separator: "\n")
+        
+        // 変換した箇条書き文字列を次の画面に渡すための準備
+        let nextViewController = storyboard?.instantiateViewController(withIdentifier: "NextViewController") as! NextViewController
+        nextViewController.bulletedText = bulletedText
+        
+        // 画面遷移
+        navigationController?.pushViewController(nextViewController, animated: true)
     
     
-    //次のページへ遷移
-    @IBAction func ToDoListEditorButton(_ sender: Any) {
-    }
+}
+
+
+//次のページへ遷移
+@IBAction func ToDoListEditorButton(_ sender: Any) {
+}
 }

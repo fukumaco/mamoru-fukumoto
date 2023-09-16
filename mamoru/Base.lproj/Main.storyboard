@@ -27,23 +27,24 @@
                                 <rect key="frame" x="38" y="374" width="306" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbD-oL-Ygm">
+                                <rect key="frame" x="72" y="578" width="230" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Push"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="google.png" title="　Login"/>
+                                <connections>
+                                    <action selector="googleLoginButtonTapped:" destination="Cxj-JT-cCN" eventType="touchUpInside" id="be0-nn-FyM"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1x-e6-VMx">
-                                <rect key="frame" x="97" y="535" width="180" height="35"/>
+                                <rect key="frame" x="97" y="524" width="180" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="ログインせずに入る"/>
                                 <connections>
-                                    <segue destination="s18-dS-gES" kind="show" id="xj1-h2-ZgV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbD-oL-Ygm">
-                                <rect key="frame" x="84" y="593" width="201" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="google.png" title="　Login"/>
-                                <connections>
-                                    <action selector="googleLoginButtonTapped:" destination="Cxj-JT-cCN" eventType="touchUpInside" id="oan-7s-PFW"/>
-                                    <segue destination="s18-dS-gES" kind="push" identifier="push" id="Pu9-Fi-Hz5"/>
+                                    <action selector="enterButton:" destination="Cxj-JT-cCN" eventType="touchUpInside" id="gMh-EL-9Ek"/>
+                                    <segue destination="s18-dS-gES" kind="show" identifier="Push" id="YFv-7s-gvG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -227,7 +228,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="スタート"/>
                                 <connections>
-                                    <action selector="start:" destination="3ZV-2E-pt1" eventType="touchUpInside" id="JDw-o4-V8r"/>
+                                    <action selector="start:" destination="3ZV-2E-pt1" eventType="touchUpInside" id="Lap-lP-dwj"/>
                                     <segue destination="pho-c7-1lh" kind="show" id="KGu-Fn-KhH"/>
                                 </connections>
                             </button>
@@ -236,6 +237,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="m92-jX-pbG"/>
+                    <connections>
+                        <outlet property="Chihuahua" destination="aEf-aG-uSu" id="JKW-Bl-ei0"/>
+                        <outlet property="Mameshiba" destination="m13-zH-qn5" id="A1B-iM-nFX"/>
+                        <outlet property="Schnauzer" destination="xqc-UD-boO" id="mTu-Fy-tdc"/>
+                        <outlet property="Toypoodle" destination="sWf-et-Ix0" id="C3d-AG-eHp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqs-EC-VLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -359,15 +366,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP3-iu-24J">
-                                <rect key="frame" x="167" y="424" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="計算"/>
-                                <connections>
-                                    <action selector="culculate:" destination="bEH-u3-469" eventType="touchUpInside" id="qzW-F9-CjM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAF-lE-hW6">
                                 <rect key="frame" x="86" y="470" width="220" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -410,6 +408,15 @@
                                 <buttonConfiguration key="configuration" style="plain" title="カレンダー"/>
                                 <connections>
                                     <action selector="calenderButton:" destination="bEH-u3-469" eventType="touchUpInside" id="og6-Gx-qsL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP3-iu-24J">
+                                <rect key="frame" x="167" y="409" width="59" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="計算"/>
+                                <connections>
+                                    <action selector="culculate:" destination="bEH-u3-469" eventType="touchUpInside" id="qzW-F9-CjM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -474,17 +481,17 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-Vx-06p">
-                                <rect key="frame" x="86" y="630" width="220" height="35"/>
+                                <rect key="frame" x="86" y="617" width="220" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.right.fill" catalog="system" title="　TODOリスト設定へ"/>
                                 <connections>
                                     <action selector="ToDoListEditorButton:" destination="Gtx-zG-vKG" eventType="touchUpInside" id="irk-7B-U5g"/>
-                                    <segue destination="OZB-bT-EeD" kind="show" id="UJM-Yz-TdU"/>
+                                    <segue destination="OZB-bT-EeD" kind="show" identifier="NextViewController" id="UJM-Yz-TdU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pO7-xB-URA">
-                                <rect key="frame" x="167" y="574" width="59" height="35"/>
+                                <rect key="frame" x="167" y="564" width="59" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="保存"/>
@@ -519,11 +526,14 @@
                                 <rect key="frame" x="99" y="209" width="393" height="96"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnV-S1-w26">
-                                <rect key="frame" x="110" y="670" width="163" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjh-Wu-4AY">
+                                <rect key="frame" x="110" y="765" width="59" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="カレンダーに追加"/>
+                                <buttonConfiguration key="configuration" style="plain" title="山へ"/>
+                                <connections>
+                                    <segue destination="Zym-7H-XwT" kind="show" id="YLY-S3-mLQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="残日数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOO-di-dd8">
                                 <rect key="frame" x="212" y="737" width="52" height="17"/>
@@ -552,7 +562,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLe-4p-pWy">
-                                <rect key="frame" x="162" y="627" width="59" height="35"/>
+                                <rect key="frame" x="162" y="597" width="59" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="保存"/>
@@ -589,14 +599,11 @@
                                     <outlet property="delegate" destination="OZB-bT-EeD" id="0XI-Dy-9PO"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjh-Wu-4AY">
-                                <rect key="frame" x="110" y="765" width="59" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnV-S1-w26">
+                                <rect key="frame" x="110" y="640" width="163" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="山へ"/>
-                                <connections>
-                                    <segue destination="Zym-7H-XwT" kind="show" id="YLY-S3-mLQ"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="plain" title="カレンダーに追加"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Lf-ds-Ifg"/>
@@ -1014,9 +1021,6 @@
             <point key="canvasLocation" x="8431.2977099236632" y="-177.46478873239437"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Pu9-Fi-Hz5"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Chihuahua01" width="1067" height="1676"/>
         <image name="arrowshape.forward.fill" catalog="system" width="128" height="104"/>

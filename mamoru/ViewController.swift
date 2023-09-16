@@ -31,7 +31,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            guard let user = result?.user            else { return }
+            guard let user = result?.user         else { return }
             //print(user.accessToken)
             //AUTHORISERを保存して　userdefault に保存しておく
             self.performSegue(withIdentifier: "Push", sender: self)
