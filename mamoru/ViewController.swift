@@ -41,8 +41,9 @@ class ViewController: UIViewController {
             let gidCurrentUser: GIDGoogleUser = user
             UserDefaults.standard.set(gidCurrentUser, forKey: "gidUser")
 
-            let calendarService = GTLRCalendarService()
-            calendarService.authorizer = gidCurrentUser.authentication.fetcherAuthorizer()
+//            let calendarService = GTLRCalendarService()
+//            calendarService.authorizer = gidCurrentUser.authentication.fetcherAuthorizer()
+//            calendarService.authorizer = gidCurrentUser.fetcherAuthorizer
 
             self.performSegue(withIdentifier: "Push", sender: self)
         }

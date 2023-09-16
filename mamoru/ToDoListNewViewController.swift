@@ -79,7 +79,7 @@ class ToDoListNewViewController: UIViewController, UITableViewDataSource, UITabl
         let endDateTime = deadline!
         
         let calendarService = GTLRCalendarService()
-        calendarService.authorizer = gidCurrentUser.authentication.fetcherAuthorizer()
+        calendarService.authorizer = gidCurrentUser.fetcherAuthorizer
         calendarService.shouldFetchNextPages = true
         
         let event = GTLRCalendar_Event()
