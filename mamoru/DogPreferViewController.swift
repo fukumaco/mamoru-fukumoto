@@ -17,19 +17,6 @@ class DogPreferViewController: UIViewController {
 
     var audioPlayer: AVAudioPlayer?
 
-/*
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        // 各UIImageViewにタップジェスチャーを追加
-        addTapGestureToImageView(imageView: Mameshiba, soundFileName: "dog01.mp3")
-        addTapGestureToImageView(imageView: Chihuahua, soundFileName: "dog02.mp3")
-        addTapGestureToImageView(imageView: Toypoodle, soundFileName: "dog03.mp3")
-        addTapGestureToImageView(imageView: Schnauzer, soundFileName: "dog04.mp3")
-    }
-
-     */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 

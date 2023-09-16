@@ -28,11 +28,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbD-oL-Ygm">
-                                <rect key="frame" x="72" y="578" width="230" height="120"/>
+                                <rect key="frame" x="72" y="578" width="230" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="Push"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="google.png" title="　Login"/>
+                                <buttonConfiguration key="configuration" style="plain" title="　Login"/>
                                 <connections>
                                     <action selector="googleLoginButtonTapped:" destination="Cxj-JT-cCN" eventType="touchUpInside" id="be0-nn-FyM"/>
                                 </connections>
@@ -1131,7 +1131,6 @@
         <image name="Chihuahua01" width="1067" height="1676"/>
         <image name="arrowshape.forward.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
-        <image name="google.png" width="18" height="18"/>
         <image name="mameshiba01.png" width="1134" height="1061"/>
         <image name="mountain" width="530" height="450"/>
         <image name="oni" width="772" height="1454"/>
