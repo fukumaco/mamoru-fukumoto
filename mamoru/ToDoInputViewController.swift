@@ -3,7 +3,7 @@
 //  mamoru
 //
 //  Created by Fukumoto Asako on 2023/09/13.
-//
+
 import UIKit
 
 class ToDoInputViewController: UIViewController {
@@ -17,7 +17,7 @@ class ToDoInputViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //残日数と残時間を表示する
         // プロパティの値をテキストフィールドに代入する
         remainingDays.text = remainingDaysText
@@ -32,24 +32,45 @@ class ToDoInputViewController: UIViewController {
         userDefaults.set(inputText.text, forKey: "inputText")
         // UserDefaultsに反映させる
         userDefaults.synchronize()
-        
+     
         // 改行ごとにテキストを分割して配列に格納する
-        let inputTextLines = inputText.text.split(separator: "\n").map { String($0) }
+        let inputTextLines = inputText.text!.split(whereSeparator: \.isNewline)
+        print(inputTextLines)
+        //as! [String]//.map { String($0) }
+        
+        var inputTextArray: [String] = []
+        for inputTextLine in inputTextLines {
+            let inputText = String(inputTextLine)
+            inputTextArray.append(inputText)
+        }
         
         // 配列の各要素を箇条書き文字列に変換
         let bulletedText = inputTextLines.map { "• \($0)" }.joined(separator: "\n")
         
-        // 変換した箇条書き文字列を次の画面に渡すための準備
-        let nextViewController = storyboard?.instantiateViewController(withIdentifier: "NextViewController") as! NextViewController
-        nextViewController.bulletedText = bulletedText
+        //変換した箇条書き文字列を次の画面に渡すための準備
+        let toDoInputVC = storyboard?.instantiateViewController(withIdentifier: "ToDoListNew") as! ToDoListNewViewController
+//        let nextViewController = storyboard?.instantiateViewController(withIdentifier: "ToDoListNew") as! ToDoListNewViewController
+        toDoInputVC.bulletedText = bulletedText
+        toDoInputVC.taskArray = inputTextArray
         
         // 画面遷移
-        navigationController?.pushViewController(nextViewController, animated: true)
-    
-    
+      
+//        navigationController?.pushViewController(nextViewController, animated: true)
+//        present(nextViewController, animated: true)
+        
+        
+        //navigationControllerを使った場合のコード
+        // ToDoInputViewControllerのインスタンスを作成
+//        let toDoInputVC = storyboard?.instantiateViewController(withIdentifier: "ToDoListNew") as! ToDoListNewViewController
+        // 残日数と残時間を渡す
+        toDoInputVC.remainingDaysText = remainingDays.text ?? ""
+        toDoInputVC.remainingTimeText = remainingTime.text ?? ""
+        // モーダルビューとして表示する（アニメーションはtrueとする）
+//        present(toDoInputVC, animated: true, completion: nil)
+       navigationController?.pushViewController(toDoInputVC, animated: true)
+
+        
 }
-
-
 //次のページへ遷移
 @IBAction func ToDoListEditorButton(_ sender: Any) {
 }

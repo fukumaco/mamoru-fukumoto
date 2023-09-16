@@ -8,6 +8,8 @@
 import UIKit
 import GoogleSignIn
 //import GoogleSignIn
+import GoogleAPIClientForREST_Calendar
+
 
 class ViewController: UIViewController {
     //class ViewController: UIViewController, GIDSignInDelegate
@@ -19,10 +21,10 @@ class ViewController: UIViewController {
     }
     @IBAction func enterButton(_ sender: Any) {
         
-        performSegue(withIdentifier: "Push", sender: self)}
+       //performSegue(withIdentifier: "Push", sender: self)}
     //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     //pushの時に値を次の　次のテキストフィールドの変数を渡す
-    //  }
+     }
     
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
       
@@ -34,6 +36,14 @@ class ViewController: UIViewController {
             guard let user = result?.user         else { return }
             //print(user.accessToken)
             //AUTHORISERを保存して　userdefault に保存しておく
+            let authorizer = user.fetcherAuthorizer
+
+            let gidCurrentUser: GIDGoogleUser = user
+            UserDefaults.standard.set(gidCurrentUser, forKey: "gidUser")
+
+            let calendarService = GTLRCalendarService()
+            calendarService.authorizer = gidCurrentUser.authentication.fetcherAuthorizer()
+
             self.performSegue(withIdentifier: "Push", sender: self)
         }
     }

@@ -90,10 +90,9 @@ event.end?.dateTime = GTLRDateTime(date: deadline.date.addingTimeInterval(3600))
 let calendarId = "primary"
 
 //カレンダーへ追加しますといったとこに予定がぜんび入っていますかと確認します
-//確認した上で認証情報え　userswfuot に入っているか確認しつつ、入っていたら持ってくる
+//確認した上で認証情報え　usersdefault に入っているか確認しつつ、入っていたら持ってくる
 //カレンダーにイベントを入れる　クエリーのサービスを入れる
 // googledpcumentを見て同じ記述であればOK
-
 
 // イベントをカレンダーに追加
 let query = GTLRCalendarQuery_EventsInsert.query(withObject: event, calendarId: calendarId)
@@ -107,9 +106,6 @@ service.executeQuery(query) { (ticket, object, error) in
 このコードは、GoogleカレンダーAPIを使用して、指定された日時に新しいイベント（締切日）をカレンダーに追加します。Googleアカウントにサインインしていることを確認してください。また、必要に応じてカレンダーIDを調整してください。
 
 さらに、GoogleカレンダーAPIを使用するために必要な認証のセットアップやエラーハンドリングを適切に行うことが重要です。 APIキーと認証情報の取得については、Google Calendar APIの公式ドキュメントを参照してください。
-
-
-
 
 */
 
