@@ -9,10 +9,23 @@
 /* Begin PBXBuildFile section */
 		6A06F3482AB3CB3A001EDA5A /* MountIwateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A06F3472AB3CB3A001EDA5A /* MountIwateViewController.swift */; };
 		6A276C872AB5A1B800A83D25 /* GoogleAPIClientForREST_Calendar in Frameworks */ = {isa = PBXBuildFile; productRef = 6A276C862AB5A1B800A83D25 /* GoogleAPIClientForREST_Calendar */; };
+		6A276C8C2AB5F84900A83D25 /* dog9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A276C882AB5F84900A83D25 /* dog9.mp3 */; };
+		6A276C8D2AB5F84900A83D25 /* dog10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A276C892AB5F84900A83D25 /* dog10.mp3 */; };
+		6A276C8E2AB5F84900A83D25 /* dog11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A276C8A2AB5F84900A83D25 /* dog11.mp3 */; };
+		6A276C8F2AB5F84900A83D25 /* dog8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A276C8B2AB5F84900A83D25 /* dog8.mp3 */; };
+		6A276C932AB600C000A83D25 /* mountiwate2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A276C922AB600C000A83D25 /* mountiwate2.png */; };
+		6A33CBC32AB690770059B86A /* mameshiba06.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A33CBC02AB690770059B86A /* mameshiba06.png */; };
+		6A33CBC42AB690770059B86A /* mameshiba07.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A33CBC12AB690770059B86A /* mameshiba07.png */; };
+		6A33CBC52AB690770059B86A /* mameshiba08.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A33CBC22AB690770059B86A /* mameshiba08.png */; };
+		6A33CBC72AB692370059B86A /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A33CBC62AB692370059B86A /* ReplyViewController.swift */; };
 		6A51AAC32AB421910089807D /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A51AAC22AB421910089807D /* TypeViewController.swift */; };
 		6A51AAC52AB421CA0089807D /* DogPreferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A51AAC42AB421CA0089807D /* DogPreferViewController.swift */; };
 		6A51AAC72AB429BC0089807D /* DailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A51AAC62AB429BC0089807D /* DailyReportViewController.swift */; };
 		6A51AAC92AB431BC0089807D /* MountGraphicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A51AAC82AB431BB0089807D /* MountGraphicViewController.swift */; };
+		6A5ED67E2AB6B053003ACBBD /* saboten.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A5ED67D2AB6B053003ACBBD /* saboten.png */; };
+		6A5ED6802AB6B195003ACBBD /* DailyReport2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5ED67F2AB6B195003ACBBD /* DailyReport2ViewController.swift */; };
+		6A5ED6822AB6B582003ACBBD /* mountain002ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5ED6812AB6B582003ACBBD /* mountain002ViewController.swift */; };
+		6A5ED6842AB6B60C003ACBBD /* flowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5ED6832AB6B60C003ACBBD /* flowerViewController.swift */; };
 		6A64AC672AB315E300125EC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64AC662AB315E300125EC0 /* MapViewController.swift */; };
 		6A64AC692AB3354900125EC0 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64AC682AB3354900125EC0 /* ContentViewController.swift */; };
 		6A6EC3D12AB53549002C0446 /* ToDoListNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6EC3D02AB53549002C0446 /* ToDoListNewViewController.swift */; };
@@ -44,10 +57,23 @@
 
 /* Begin PBXFileReference section */
 		6A06F3472AB3CB3A001EDA5A /* MountIwateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountIwateViewController.swift; sourceTree = "<group>"; };
+		6A276C882AB5F84900A83D25 /* dog9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog9.mp3; sourceTree = "<group>"; };
+		6A276C892AB5F84900A83D25 /* dog10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog10.mp3; sourceTree = "<group>"; };
+		6A276C8A2AB5F84900A83D25 /* dog11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog11.mp3; sourceTree = "<group>"; };
+		6A276C8B2AB5F84900A83D25 /* dog8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog8.mp3; sourceTree = "<group>"; };
+		6A276C922AB600C000A83D25 /* mountiwate2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountiwate2.png; sourceTree = "<group>"; };
+		6A33CBC02AB690770059B86A /* mameshiba06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mameshiba06.png; sourceTree = "<group>"; };
+		6A33CBC12AB690770059B86A /* mameshiba07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mameshiba07.png; sourceTree = "<group>"; };
+		6A33CBC22AB690770059B86A /* mameshiba08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mameshiba08.png; sourceTree = "<group>"; };
+		6A33CBC62AB692370059B86A /* ReplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
 		6A51AAC22AB421910089807D /* TypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewController.swift; sourceTree = "<group>"; };
 		6A51AAC42AB421CA0089807D /* DogPreferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPreferViewController.swift; sourceTree = "<group>"; };
 		6A51AAC62AB429BC0089807D /* DailyReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportViewController.swift; sourceTree = "<group>"; };
 		6A51AAC82AB431BB0089807D /* MountGraphicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountGraphicViewController.swift; sourceTree = "<group>"; };
+		6A5ED67D2AB6B053003ACBBD /* saboten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saboten.png; sourceTree = "<group>"; };
+		6A5ED67F2AB6B195003ACBBD /* DailyReport2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReport2ViewController.swift; sourceTree = "<group>"; };
+		6A5ED6812AB6B582003ACBBD /* mountain002ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mountain002ViewController.swift; sourceTree = "<group>"; };
+		6A5ED6832AB6B60C003ACBBD /* flowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowerViewController.swift; sourceTree = "<group>"; };
 		6A64AC662AB315E300125EC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6A64AC682AB3354900125EC0 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		6A6EC3D02AB53549002C0446 /* ToDoListNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListNewViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				6A714C452AAEB9A80055A0A7 /* Main.storyboard */,
+				6A5ED6812AB6B582003ACBBD /* mountain002ViewController.swift */,
+				6A5ED67F2AB6B195003ACBBD /* DailyReport2ViewController.swift */,
 				6A714C3F2AAEB9A80055A0A7 /* AppDelegate.swift */,
 				6A714C412AAEB9A80055A0A7 /* SceneDelegate.swift */,
 				6A714C432AAEB9A80055A0A7 /* ViewController.swift */,
@@ -122,13 +150,20 @@
 				6A6EC3D02AB53549002C0446 /* ToDoListNewViewController.swift */,
 				6A6EC3D22AB542B6002C0446 /* TableViewCell.swift */,
 				6A51AAC62AB429BC0089807D /* DailyReportViewController.swift */,
+				6A33CBC62AB692370059B86A /* ReplyViewController.swift */,
+				6A77B6362AB1827F005B115A /* calenderViewController.swift */,
 				6A64AC662AB315E300125EC0 /* MapViewController.swift */,
 				6A51AAC82AB431BB0089807D /* MountGraphicViewController.swift */,
+				6A5ED6832AB6B60C003ACBBD /* flowerViewController.swift */,
 				6A06F3472AB3CB3A001EDA5A /* MountIwateViewController.swift */,
-				6A77B6362AB1827F005B115A /* calenderViewController.swift */,
 				6A64AC682AB3354900125EC0 /* ContentViewController.swift */,
 				6AF050322AB14D4E004D8175 /* ToDoListViewController.swift */,
+				6A5ED67D2AB6B053003ACBBD /* saboten.png */,
 				6A714C482AAEB9AB0055A0A7 /* Assets.xcassets */,
+				6A33CBC02AB690770059B86A /* mameshiba06.png */,
+				6A33CBC12AB690770059B86A /* mameshiba07.png */,
+				6A33CBC22AB690770059B86A /* mameshiba08.png */,
+				6A276C922AB600C000A83D25 /* mountiwate2.png */,
 				6A714C542AAEE4720055A0A7 /* mameshiba01.png */,
 				6A714C532AAEE4720055A0A7 /* mameshiba02.png */,
 				6A714C4A2AAEB9AB0055A0A7 /* LaunchScreen.storyboard */,
@@ -136,6 +171,10 @@
 				6A83CC9B2AB4A03900A4B0A9 /* dog03.mp3 */,
 				6A83CCA32AB4A38400A4B0A9 /* dog02.mp3 */,
 				6A83CC992AB4A03900A4B0A9 /* dog04.mp3 */,
+				6A276C8B2AB5F84900A83D25 /* dog8.mp3 */,
+				6A276C882AB5F84900A83D25 /* dog9.mp3 */,
+				6A276C892AB5F84900A83D25 /* dog10.mp3 */,
+				6A276C8A2AB5F84900A83D25 /* dog11.mp3 */,
 				6A83CC972AB4A03900A4B0A9 /* dog05.mp3 */,
 				6A83CC962AB4A03900A4B0A9 /* dog06.mp3 */,
 				6A83CC982AB4A03900A4B0A9 /* dog07.mp3 */,
@@ -212,16 +251,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A33CBC32AB690770059B86A /* mameshiba06.png in Resources */,
 				6A714C4C2AAEB9AB0055A0A7 /* LaunchScreen.storyboard in Resources */,
+				6A276C8D2AB5F84900A83D25 /* dog10.mp3 in Resources */,
+				6A33CBC52AB690770059B86A /* mameshiba08.png in Resources */,
 				6A83CCA02AB4A03900A4B0A9 /* dog04.mp3 in Resources */,
+				6A276C8E2AB5F84900A83D25 /* dog11.mp3 in Resources */,
+				6A276C8F2AB5F84900A83D25 /* dog8.mp3 in Resources */,
 				6A714C492AAEB9AB0055A0A7 /* Assets.xcassets in Resources */,
 				6A83CCA12AB4A03900A4B0A9 /* dog01.mp3 in Resources */,
 				6A83CCA22AB4A03900A4B0A9 /* dog03.mp3 in Resources */,
+				6A276C8C2AB5F84900A83D25 /* dog9.mp3 in Resources */,
 				6AEFC73E2AB0244300D2DA8C /* client_543081431652-i8583mar2pgv9565g09sop7jcqh8db11.apps.googleusercontent.com.plist in Resources */,
+				6A5ED67E2AB6B053003ACBBD /* saboten.png in Resources */,
 				6A83CCA42AB4A38400A4B0A9 /* dog02.mp3 in Resources */,
+				6A276C932AB600C000A83D25 /* mountiwate2.png in Resources */,
 				6A83CC9F2AB4A03900A4B0A9 /* dog07.mp3 in Resources */,
 				6A714C562AAEE4720055A0A7 /* mameshiba01.png in Resources */,
 				6A83CC9E2AB4A03900A4B0A9 /* dog05.mp3 in Resources */,
+				6A33CBC42AB690770059B86A /* mameshiba07.png in Resources */,
 				6A714C472AAEB9A80055A0A7 /* Main.storyboard in Resources */,
 				6A83CC9D2AB4A03900A4B0A9 /* dog06.mp3 in Resources */,
 				6A714C552AAEE4720055A0A7 /* mameshiba02.png in Resources */,
@@ -236,15 +284,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A51AAC72AB429BC0089807D /* DailyReportViewController.swift in Sources */,
+				6A33CBC72AB692370059B86A /* ReplyViewController.swift in Sources */,
+				6A5ED6822AB6B582003ACBBD /* mountain002ViewController.swift in Sources */,
 				6A51AAC32AB421910089807D /* TypeViewController.swift in Sources */,
 				6A51AAC92AB431BC0089807D /* MountGraphicViewController.swift in Sources */,
 				6A64AC692AB3354900125EC0 /* ContentViewController.swift in Sources */,
 				6A714C442AAEB9A80055A0A7 /* ViewController.swift in Sources */,
+				6A5ED6802AB6B195003ACBBD /* DailyReport2ViewController.swift in Sources */,
 				6A6EC3D12AB53549002C0446 /* ToDoListNewViewController.swift in Sources */,
 				6ACC49972AB1EC8700C37CD3 /* ToDoInputViewController.swift in Sources */,
 				6AF49BF52AB091A4007008DD /* NewSettingViewController.swift in Sources */,
 				6A06F3482AB3CB3A001EDA5A /* MountIwateViewController.swift in Sources */,
 				6A714C582AAEE8320055A0A7 /* GoalViewController.swift in Sources */,
+				6A5ED6842AB6B60C003ACBBD /* flowerViewController.swift in Sources */,
 				6A64AC672AB315E300125EC0 /* MapViewController.swift in Sources */,
 				6A77B6372AB1827F005B115A /* calenderViewController.swift in Sources */,
 				6A714C402AAEB9A80055A0A7 /* AppDelegate.swift in Sources */,

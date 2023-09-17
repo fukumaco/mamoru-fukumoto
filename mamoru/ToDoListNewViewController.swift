@@ -67,26 +67,69 @@ class ToDoListNewViewController: UIViewController, UITableViewDataSource, UITabl
         //        }
         
         
-        let gidCurrentUser = UserDefaults.standard.object(forKey: "gidUser") as! GIDGoogleUser
-        
-        
-        //        let gidCurrentUser = GIDSignIn.sharedInstance()?.currentUser
-        
-        let eventName = "test Event"
-        
-        let startDateTime = startDate!
-        let endDateTime = deadline!
-        /*
-            if let startDate = startDate, let deadline = deadline {
-            // startDateとdeadlineがnilでない場合の処理
-            let startDateTime = startDate
-            let endDateTime = deadline
-            // ここでstartDateTimeとendDateTimeを使用する処理を書く
-        } else {
-            print("error")
-            // startDateかdeadlineのいずれかがnilの場合の処理
+        // let gidCurrentUser = UserDefaults.standard.object(forKey: "gidUser") as! GIDGoogleUser
+        /*  GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
+         guard error == nil else {
+         return
+         }
+         
+         guard let user = result?.user         else { return }
+         //print(user.accessToken)
+         //AUTHORISERを保存して　userdefault に保存しておく
+         let authorizer = user.fetcherAuthorizer
+         
+         let gidCurrentUser: GIDGoogleUser = user
+         
+         do {
+         let data = try NSKeyedArchiver.archivedData(withRootObject: gidCurrentUser, requiringSecureCoding: false)
+         UserDefaults.standard.set(data, forKey: "gidUser")
+         } catch {
+         print("Error while encoding GIDGoogleUser object")
+         }
+         
+         //            let calendarService = GTLRCalendarService()
+         //            calendarService.authorizer = gidCurrentUser.authentication.fetcherAuthorizer()
+         //            calendarService.authorizer = gidCurrentUser.fetcherAuthorizer
+         
+         // self.performSegue(withIdentifier: "Push", sender: self)
+         
+         //ここでGoogleログインをさせる送る先のログインをしてもらう　GIDcurrentuserを送ってみる
+         //最初の画面をこ
+         //        let gidCurrentUser = GIDSignIn.sharedInstance()?.currentUser
+         
+         */
+        let additionalScopes = ["https://www.googleapis.com/auth/calendar"]
+        guard let gidCurrentUser = GIDSignIn.sharedInstance.currentUser else {
+            return ;  /* Not signed in. */
         }
-*/
+        
+        gidCurrentUser.addScopes(additionalScopes, presenting: self) { signInResult, error in
+            guard error == nil else { return }
+            guard let signInResult = signInResult else { return }
+            
+            // Check if the user granted access to the scopes you requested.
+            //カレンダーの認証を持ったユーザーがいかの処理をする
+            
+        }
+        //for文で作って
+        let eventName = "MAMORU締切100% PROJECT"        //ここに入れる
+        let startDateTime = self.startDate!
+        let endDateTime = self.deadline!
+        deadline!
+        
+        //calender service
+        
+        /*
+         if let startDate = startDate, let deadline = deadline {
+         // startDateとdeadlineがnilでない場合の処理
+         let startDateTime = startDate
+         let endDateTime = deadline
+         // ここでstartDateTimeとendDateTimeを使用する処理を書く
+         } else {
+         print("error")
+         // startDateかdeadlineのいずれかがnilの場合の処理
+         }
+         */
         
         let calendarService = GTLRCalendarService()
         calendarService.authorizer = gidCurrentUser.fetcherAuthorizer
@@ -95,24 +138,27 @@ class ToDoListNewViewController: UIViewController, UITableViewDataSource, UITabl
         let event = GTLRCalendar_Event()
         event.summary = eventName
         
-        let gtlrDateTimeStart: GTLRDateTime = GTLRDateTime(date: startDateTime)
-     //   if let startDateTime = startDate, let endDateTime = deadline {
-       //     let gtlrDateTimeStart: GTLRDateTime = GTLRDateTime(date: startDateTime)
+        //  let gtlrDateTimeStart: GTLRDateTime = GTLRDateTime(date: startDateTime)
+        if let startDateTime = self.startDate, let endDateTime = self.deadline {
+            let gtlrDateTimeStart: GTLRDateTime = GTLRDateTime(date: startDateTime)
             // startDateTimeを使用する処理
-        let startEventDateTime: GTLRCalendar_EventDateTime = GTLRCalendar_EventDateTime()
-        startEventDateTime.dateTime = gtlrDateTimeStart
-        event.start = startEventDateTime
-//        }
+            let startEventDateTime: GTLRCalendar_EventDateTime = GTLRCalendar_EventDateTime()
+            startEventDateTime.dateTime = gtlrDateTimeStart
+            event.start = startEventDateTime
+            
+        }
         
         //let gtlrDateTimeEnd: GTLRDateTime = GTLRDateTime(date: endDateTime)
-  //      if let startDateTime = startDate, let endDateTime = deadline {
-    //        let gtlrDateTimeEnd: GTLRDateTime = GTLRDateTime(date: endDateTime)
+        if let startDateTime = self.startDate, let endDateTime = self.deadline {
+            let gtlrDateTimeEnd: GTLRDateTime = GTLRDateTime(date: endDateTime)
             // endDateTimeを使用する処理を書く
-        let endEventDateTime: GTLRCalendar_EventDateTime = GTLRCalendar_EventDateTime()
-        endEventDateTime.dateTime = gtlrDateTimeEnd
-        event.end = endEventDateTime
-//        }
-
+            
+            let endEventDateTime: GTLRCalendar_EventDateTime = GTLRCalendar_EventDateTime()
+            endEventDateTime.dateTime = gtlrDateTimeEnd
+            event.end = endEventDateTime
+            
+        }
+        //複数回せる可能性もあり！全部Forで囲んでしまう
         let query = GTLRCalendarQuery_EventsInsert.query(withObject: event, calendarId: "primary")
         calendarService.executeQuery(query, completionHandler: { (ticket, event, error) -> Void in
             if let error = error {

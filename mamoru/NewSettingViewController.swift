@@ -35,10 +35,14 @@ class NewSettingViewController: UIViewController {
         let start = startDate.date
         let end = deadline.date
         
-        let components = calendar.dateComponents([.day, .hour], from: start, to: end)
+        //let components = calendar.dateComponents([.day, .hour], from: start, to: end)
+        let components = calendar.dateComponents([.day], from: start, to: end)
+        let componentshour = calendar.dateComponents([.hour], from: start, to: end)
+        
+        print(components)
         
         let days = components.day ?? 0
-        let hours = components.hour ?? 0
+        let hours = componentshour.hour ?? 0
         
         remainingDays.text = "\(days) days"
         remainingTime.text = "\(hours) hours"
@@ -47,7 +51,7 @@ class NewSettingViewController: UIViewController {
 
         // 締切日を保存する
         userDefaults.set(deadline.date, forKey: "deadline")
-
+        
         // 開始日を保存する
         userDefaults.set(startDate.date, forKey: "startDate")
 
@@ -60,7 +64,6 @@ class NewSettingViewController: UIViewController {
         // UserDefaultsに反映させる
         userDefaults.synchronize()
     }
-    
     @IBAction func ToTodolistButton(_ sender: Any) {
         // ToDoInputViewControllerのインスタンスを作成
         let toDoInputVC = storyboard?.instantiateViewController(withIdentifier: "ToDoInputViewController") as! ToDoInputViewController
