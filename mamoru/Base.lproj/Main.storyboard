@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -523,8 +522,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mameshiba06.png" translatesAutoresizingMaskIntoConstraints="NO" id="SJo-JY-nFa">
+                                <rect key="frame" x="39" y="637" width="140" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pO7-xB-URA">
-                                <rect key="frame" x="94" y="472" width="207" height="35"/>
+                                <rect key="frame" x="93" y="520" width="207" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.right.fill" catalog="system" title="　　　保存して次へ"/>
@@ -532,10 +535,6 @@
                                     <action selector="saveButton:" destination="Gtx-zG-vKG" eventType="touchUpInside" id="sEJ-4h-PLO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mameshiba06.png" translatesAutoresizingMaskIntoConstraints="NO" id="SJo-JY-nFa">
-                                <rect key="frame" x="39" y="637" width="140" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3x2-hd-kHi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -745,6 +744,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="カレンダーに追加"/>
+                                <connections>
+                                    <action selector="toGoogleCalendar:" destination="f2r-Wd-44K" eventType="touchUpInside" id="xsN-S9-rIL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a34-Yv-ihl">
                                 <rect key="frame" x="294" y="582" width="76" height="35"/>
@@ -762,7 +764,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="MAMORU　締切100%  PROJECT"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mameshiba07.png" translatesAutoresizingMaskIntoConstraints="NO" id="yVC-A0-1si">
-                                <rect key="frame" x="16" y="651" width="140" height="115"/>
+                                <rect key="frame" x="31" y="663" width="140" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -928,35 +930,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFt-uZ-znO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11013" y="-177"/>
-        </scene>
-        <!--Mount Iwate View Controller-->
-        <scene sceneID="owb-wK-Tez">
-            <objects>
-                <viewController id="Jv9-oZ-ImC" customClass="MountIwateViewController" customModule="mamoru" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yZv-jE-HXc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="owj-j6-IdV">
-                                <rect key="frame" x="16" y="127" width="359" height="440"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mameshiba02.png" translatesAutoresizingMaskIntoConstraints="NO" id="gDA-7P-3RA">
-                                <rect key="frame" x="102" y="589" width="186" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="KvF-Lj-fNa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="mountIwate" destination="owj-j6-IdV" id="utu-u2-Zod"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pBI-U2-u3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="10447" y="502"/>
         </scene>
         <!--Mountain002 View Controller-->
         <scene sceneID="IcJ-iL-aby">
